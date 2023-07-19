@@ -16,6 +16,10 @@ Works on Chrome, Edge, and Safari */
 *, :after, :before {
     box-sizing: border-box;
 }
+/* *:hover {
+    color: var(--widget-title-color) !important;
+
+} */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root, html[data-theme="light"] {
@@ -279,18 +283,16 @@ body {
 
 
 /* LOGIN PAGE */
+.for-login {
+    padding: 50px !important;
+}
 .for-login .page-card {
-    max-width:  100% !important;
-    height: 500px !important;
+    max-width: 400px !important;
     border-radius: 15px !important;
-    background: #F4F5F6 !important;
-    box-shadow: none !important;
-    display: block !important;
-    margin: 0 !important;
+    margin: 30px auto !important;
+    background: #ffffff !important;
 }
-.for-login .page-card-head {
-    display: none !important;
-}
+
 
 /* Login Card Changes */
 .btn-primary:not(:disabled):not(.disabled):active
@@ -301,6 +303,8 @@ body {
 }
 .page-card-head h4{
     color: black !important;
+    font-size: 22px !important;
+    font-weight: 500;
 }
 .for-forgot .page-card {
     max-width: 400px !important;
@@ -356,6 +360,7 @@ body {
 .navbar {
     background: #814cb8 !important;
     border-color: var(--navbar-border-color) !important;
+    height: 60px !important;
 }
 #navbar-breadcrumbs a  {
     color: var(--navbar-bdcrumbs-a) !important;
@@ -389,11 +394,20 @@ body {
 .widget-group {
     justify-content: space-around;
 }
-.widget .widget-head .widget-title {
+.widget .widget-head .widget-title,
+.widget .widget-head .widget-title:hover {
     font-size: 15px !important;
     color: var(--widget-title-color) !important;
     font-weight: 500 !important;    
 } 
+/* .ce-block__content .widget-head:hover {
+    color: var(--widget-title-color) !important;
+} */
+
+.widget .widget-head .widget-label .widget-title svg,
+.widget .widget-head .widget-label .widget-title svg:hover {
+    color: var(--widget-title-color) !important;
+}
 .widget {
     border: 1px solid var(--widget-border) !important;   
 }
@@ -605,19 +619,19 @@ body {
 } 
 
 /* LOGIN PAGE */
- .navbar-brand {
+ /* .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
-}
+}*/
 .navbar-brand img {
-    max-width: 150px;
+    max-width: 72px;
     max-height: 40px;
     position: relative;
-} 
-use.like-icon {
+}
+/* use.like-icon {
     stroke: var(--like-icon-stroke);
     fill:  var(--like-icon-fill);
-} 
+}  */
 .like-disabled-input.bold{
     color: var(--like-disabled-input);
     font-weight: 700;
@@ -646,6 +660,11 @@ input[type="checkbox"]:checked {
     background-color: var(--sidebar-selected-item-bg) !important;
     color: var(--sidebar-selected-item-color) !important;
 }
+.desk-sidebar .standard-sidebar-item.selected .sidebar-item-label,
+.desk-sidebar .standard-sidebar-item:hover .sidebar-item-label
+{
+    color: var(--sidebar-selected-item-color) !important;
+}
 .desk-sidebar .standard-sidebar-item.selected .icon,
 .desk-sidebar .standard-sidebar-item:hover .icon {
    fill: var(--sidebar-selcted-icon-fill) !important;
@@ -659,200 +678,4 @@ input[type="checkbox"]:checked {
 }
 .form-message.blue a{
     color: white !important;
-}
-/* Custom Login */
-@media (min-width: 360px) and (max-width: 411px)
-{
-    .login-content.page-card {
-        display: flex !important;
-    }
-    .for-login {
-        padding-top: 50px !important;
-        display: block !important;
-        height: 600px !important;
-        width: 950px !important;
-      }
-    .login-image {
-        width: 60% !important;
-        height: 100% !important;
-        display: none !important;
-    }
-     .login-image img {
-        width: 100% !important;
-        height: 100% !important;
-    }
-    .for-login .page-card {
-        height: 600px !important;
-    }
-    .for-login .page-card form {
-        background-color: #fff !important;
-        width: 50% !important;
-        padding: 20px !important;
-        box-shadow: var(--widget-hover-shadow) !important;
-        border-radius: 15px !important;
-        margin: 0 0% !important;
-    }
-    .page-card-login {
-        text-align: center !important;
-        padding-top: 10% !important;
-        padding-bottom: 10% !important;
-    
-    }
-    .container.my-4 {
-        margin: 0 !important;
-    }
-}
-@media (min-width: 412px) and (max-width: 511px)
-{
-    .login-content.page-card {
-        display: flex !important;
-    }
-    .for-login {
-        padding-top: 50px !important;
-        display: block !important;
-        height: 600px !important;
-        width: 950px !important;
-      }
-    .login-image {
-        width: 60% !important;
-        height: 100% !important;
-        display: none !important;
-    }
-     .login-image img {
-        width: 100% !important;
-        height: 100% !important;
-    }
-    .for-login .page-card {
-        height: 600px !important;
-    }
-    .for-login .page-card form {
-        background-color: #fff !important;
-        width: 50% !important;
-        padding: 20px !important;
-        box-shadow: var(--widget-hover-shadow) !important;
-        border-radius: 15px !important;
-        margin: 0 2% !important;
-    }
-    .page-card-login {
-        text-align: center !important;
-        padding-top: 10% !important;
-        padding-bottom: 10% !important;
-    }
-    .container.my-4 {
-        margin: 0 !important;
-    }
-}
-@media (min-width: 800px) and (max-width: 850px)
-{
-    .login-content.page-card {
-        display: flex !important;
-    }
-    .for-login {
-        padding-top: 50px !important;
-        display: block !important;
-        height: 600px !important;
-        width: 950px !important;
-      }
-    .login-image {
-        width: 60% !important;
-        height: 100% !important;
-        display: none !important;
-    }
-     .login-image img {
-        width: 100% !important;
-        height: 100% !important;
-    }
-    .for-login .page-card {
-        height: 450px !important;
-    }
-    .for-login .page-card form {
-        background-color: #fff !important;
-        width: 50% !important;
-        padding: 20px !important;
-        box-shadow: var(--widget-hover-shadow) !important;
-        border-radius: 15px !important;
-        margin: 0 24% !important;
-    }
-    .page-card-login {
-        text-align: center !important;
-        padding-top: 10% !important;
-        padding-bottom: 10% !important;
-    
-    }
-    .container.my-4 {
-        margin: 0 !important;
-    }
-}
-@media (min-width:851px) and (max-width: 991px) {
-    .login-content.page-card {
-        display: flex !important;
-    }
-    .for-login {
-        padding-top: 50px !important;
-        display: block !important;
-        height: 600px !important;
-        width: 950px !important;
-      }
-    .login-image {
-        width: 60% !important;
-        height: 100% !important;
-        display: none !important;
-    }
-     .login-image img {
-        width: 100% !important;
-        height: 100% !important;
-    }
-    .for-login .page-card {
-        height: 600px !important;
-    }
-    .for-login .page-card form {
-        background-color: #fff !important;
-        width: 50% !important;
-        padding: 20px !important;
-        box-shadow: var(--widget-hover-shadow) !important;
-        border-radius: 15px !important;
-        margin: 0.8% 24% 10% 33% !important;
-    }
-    .page-card-login {
-        text-align: center !important;
-        padding-top: 20% !important;
-    
-    }
-    .container.my-4 {
-        margin: 0 !important;
-    }
-    }
-@media (min-width: 992px) {
-.login-content.page-card {
-    display: flex !important;
-}
-.for-login {
-    padding: 50px !important;
-    display: block !important;
-    height: 600px !important;
-  }
-.login-image {
-    width: 60% !important;
-    height: 100% !important;
-}
- .login-image img {
-    width: 100% !important;
-    height: 100% !important;
-}
-.for-login .page-card {
-    height: 600px !important;
-}
-.for-login .page-card form {
-    background-color: #fff !important;
-    width: 50% !important;
-    padding: 20px !important;
-    box-shadow: var(--widget-hover-shadow) !important;
-    border-radius: 15px !important;
-    margin: 2.8% 0 5% 12% !important;
-}
-.page-card-login {
-    text-align: center !important;
-    padding-top: 20% !important;
-    padding-bottom: 10%;
-}
 }
